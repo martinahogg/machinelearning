@@ -13,11 +13,12 @@ b = (Y.mean() * X.dot(X) - X.mean() * X.dot(Y)) / denominator
 # Calculate predictes values of Y from the line equation with a and b.
 Yhat = a * X + b
 
-# Calculate an score of the 
+# Calculate a score of the accuracy of our predictions.
 d1 = Y - Yhat
 d2 = Y - Y.mean()
 rsquared = 1 - d1.dot(d1) / d2.dot(d2)
 
+# Plot the training points and predicted line of best fit
 plt.scatter(X, Y)
 plt.plot(X, Yhat)
 plt.title("Single Dimension Linear Regression")
