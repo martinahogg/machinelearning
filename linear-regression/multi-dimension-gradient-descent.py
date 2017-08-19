@@ -1,21 +1,20 @@
 import numpy as np
 import matplotlib.pyplot as plt
 
-# Set the inputs.
-# First column is a bias of 1.
-# Second column has 5 zeros and five ones.
-# Third column has 5 ones and five zeros.
-X = np.zeros((10,3))
-X[:,0] = 1
-X[:5,1] = 1
-X[5:,2] = 1
+X = np.array([
+  [1, 1, 0],
+  [1, 1, 0],
+  [1, 1, 0],
+  [1, 1, 0],
+  [1, 1, 0],
+  [1, 0, 1],
+  [1, 0, 1],
+  [1, 0, 1],
+  [1, 0, 1],
+  [1, 0, 1] ])
 
-# Set the targets
-Y = np.array([0]*5 + [1]*5)
+Y = np.array([0, 0, 0, 0, 0, 1, 1, 1, 1, 1])
 
-# We cannot use np.linalg.solve(X.T.dot(X), X.T.dot(Y))
-# to calcuate our weights because X.T.dot(x) is a
-# singular matrix.
 
 # Set weights to random values and ensure
 # they have a variance of 1/D which is

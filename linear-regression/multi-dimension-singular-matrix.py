@@ -23,5 +23,3 @@ Y = np.array([0, 0, 0, 0, 0, 1, 1, 1, 1, 1])
 # as gradient descent, to determine the weights that give the lowest
 # error.
 w = np.linalg.solve(np.dot(X.T, X), np.dot(X.T, Y))
-
-
