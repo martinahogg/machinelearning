@@ -15,7 +15,7 @@ actualW = np.array([1, 0.5, -0.5] + [0]*47)
 Y = X.dot(actualW) + np.random.randn(50) * 0.5
 
 # Use gradient descent with L1 regularisation to derive the
-# wieghts from the training samples.
+# weights from the training samples.
 w = np.random.randn(50) / np.sqrt(50)
 learning_rate = 0.0001
 errors = []
