@@ -33,7 +33,9 @@ learning_rate = 0.001
 w = np.random.randn(3)
 for i in range(1000):
   THatTrain = sigmoid(XTrain.dot(w))
-  w = w - (learning_rate * XTrain.T.dot(THatTrain - TTrain))
+  delta = THatTrain - TTrain
+  gradient = 2 * XTrain.T.dot(delta)
+  w = w - (learning_rate * gradient)
 
 print("Training classification_rate:", np.mean(TTrain == np.round(THatTrain)))
 
