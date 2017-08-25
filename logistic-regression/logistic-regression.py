@@ -21,25 +21,27 @@ X[50:,1:] = X[50:,1:] + 2 * np.ones((50,2))
 # is one.
 T = np.array([0]*50 + [1]*50)
 
-# create train and test sets
 X, T = shuffle(X, T)
-Xtrain = X[:-50]
-Ttrain = T[:-50]
-Xtest = X[-50:]
-Ttest = T[-50:]
 
-# train loop
+# Use the first 50 rows of our samples to train
+# the model.
+XTrain = X[:-50]
+TTrain = T[:-50]
+
+# Training
 learning_rate = 0.001
 w = np.random.randn(3)
 for i in range(1000):
-    Ytrain = sigmoid(Xtrain.dot(w))
-    Ytest = sigmoid(Xtest.dot(w))
-    w = w - (learning_rate * Xtrain.T.dot(Ytrain - Ttrain))
+  THatTrain = sigmoid(XTrain.dot(w))
+  w = w - (learning_rate * XTrain.T.dot(THatTrain - TTrain))
 
-print("Final train classification_rate:", np.mean(Ttrain == np.round(Ytrain)))
-print("Final test classification_rate:", np.mean(Ttest == np.round(Ytest)))
+print("Training classification_rate:", np.mean(TTrain == np.round(THatTrain)))
 
-print("Final w: ", w)
+# Testing
+XTest = X[-50:]
+TTest = T[-50:]
+THatTest = sigmoid(XTest.dot(w))
+print("Testing classification_rate:", np.mean(TTest == np.round(THatTest)))
 
-plt.scatter(Xtest[:,1], Xtest[:,2], c=Ytest, s=100, alpha=0.5)
+plt.scatter(XTest[:,1], XTest[:,2], c=THatTest, s=100, alpha=0.5)
 plt.show()
