@@ -21,12 +21,12 @@ learning_rate = 0.000001
 errors = []
 
 for t in range(1000):
-  YHat = X.dot(w)
-  delta = YHat - Y
-  gradient = 2 * X.T.dot(delta)
-  w = w - (learning_rate * gradient)
-  error = delta.dot(delta) / 3
-  errors.append(error)
+	YHat = X.dot(w)
+	delta = YHat - Y
+	gradient = 2 * X.T.dot(delta)
+	w = w - (learning_rate * gradient)
+	error = delta.dot(delta) / 3
+	errors.append(error)
 
 # Plot the mean squared error reducing over the 1000 iterations.
 plt.plot(errors)

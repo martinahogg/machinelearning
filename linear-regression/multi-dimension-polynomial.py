@@ -13,12 +13,12 @@ Xraw = np.array([1, 2, 3, 4, 5, 6])
 # By preparing our input values in this way, the algorithm 
 # can derive a polynomial (i.e. a curved plane or hyper-plane).
 X = np.array([
-  [math.pow(Xraw[0], 0), math.pow(Xraw[0], 1), math.pow(Xraw[0],2), math.pow(Xraw[0],3)],
-  [math.pow(Xraw[1], 0), math.pow(Xraw[1], 1), math.pow(Xraw[1],2), math.pow(Xraw[1],3)],
-  [math.pow(Xraw[2], 0), math.pow(Xraw[2], 1), math.pow(Xraw[2],2), math.pow(Xraw[2],3)],
-  [math.pow(Xraw[3], 0), math.pow(Xraw[3], 1), math.pow(Xraw[3],2), math.pow(Xraw[3],3)],
-  [math.pow(Xraw[4], 0), math.pow(Xraw[4], 1), math.pow(Xraw[4],2), math.pow(Xraw[4],3)],
-  [math.pow(Xraw[5], 0), math.pow(Xraw[5], 1), math.pow(Xraw[5],2), math.pow(Xraw[5],3)] ])
+	[math.pow(Xraw[0], 0), math.pow(Xraw[0], 1), math.pow(Xraw[0],2), math.pow(Xraw[0],3)],
+	[math.pow(Xraw[1], 0), math.pow(Xraw[1], 1), math.pow(Xraw[1],2), math.pow(Xraw[1],3)],
+	[math.pow(Xraw[2], 0), math.pow(Xraw[2], 1), math.pow(Xraw[2],2), math.pow(Xraw[2],3)],
+	[math.pow(Xraw[3], 0), math.pow(Xraw[3], 1), math.pow(Xraw[3],2), math.pow(Xraw[3],3)],
+	[math.pow(Xraw[4], 0), math.pow(Xraw[4], 1), math.pow(Xraw[4],2), math.pow(Xraw[4],3)],
+	[math.pow(Xraw[5], 0), math.pow(Xraw[5], 1), math.pow(Xraw[5],2), math.pow(Xraw[5],3)] ])
 
 Y = np.array([27, 80, 181, 342, 575, 892])
 

@@ -32,11 +32,11 @@ TTrain = T[:-50]
 learning_rate = 0.001
 w = np.random.randn(3)
 for i in range(1000):
-  THatTrain = sigmoid(XTrain.dot(w))
-  delta = THatTrain - TTrain
-  gradient = 2 * XTrain.T.dot(delta)
-  l2 = 10 * 2 * w;
-  w = w - (learning_rate * (gradient + l2))
+	THatTrain = sigmoid(XTrain.dot(w))
+	delta = THatTrain - TTrain
+	gradient = 2 * XTrain.T.dot(delta)
+	l2 = 10 * 2 * w;
+	w = w - (learning_rate * (gradient + l2))
 
 print("Training classification_rate:", np.mean(TTrain == np.round(THatTrain)))
 

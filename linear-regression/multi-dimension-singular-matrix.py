@@ -3,16 +3,16 @@ import matplotlib.pyplot as plt
 
 # Create some training samples in which np.dot(X.T, X) is a singular matrix
 X = np.array([
-  [1, 1, 0],
-  [1, 1, 0],
-  [1, 1, 0],
-  [1, 1, 0],
-  [1, 1, 0],
-  [1, 0, 1],
-  [1, 0, 1],
-  [1, 0, 1],
-  [1, 0, 1],
-  [1, 0, 1] ])
+	[1, 1, 0],
+	[1, 1, 0],
+	[1, 1, 0],
+	[1, 1, 0],
+	[1, 1, 0],
+	[1, 0, 1],
+	[1, 0, 1],
+	[1, 0, 1],
+	[1, 0, 1],
+	[1, 0, 1] ])
 
 Y = np.array([0, 0, 0, 0, 0, 1, 1, 1, 1, 1])
 

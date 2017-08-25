@@ -28,4 +28,3 @@ plt.title("Histogram")
 plt.xlabel("Value")
 plt.ylabel("Frequency")
 plt.show()
-
