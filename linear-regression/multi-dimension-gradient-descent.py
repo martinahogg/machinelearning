@@ -36,4 +36,3 @@ plt.show()
 plt.plot(YHat, label='prediction')
 plt.plot(Y, label='targets')
 plt.show()
-
